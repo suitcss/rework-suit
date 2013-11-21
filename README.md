@@ -2,7 +2,8 @@
 
 [![Build Status](https://secure.travis-ci.org/suitcss/rework-suit.png?branch=master)](http://travis-ci.org/suitcss/rework-suit)
 
-CSS preprocessor for SUIT, built on top of [Rework](http://github.com/visionmedia/rework).
+CSS preprocessor for [SUIT](https://github.com/suitcss/suit), built on top of
+[Rework](https://github.com/visionmedia/rework).
 
 ## Installation
 
