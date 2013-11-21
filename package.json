@@ -1,0 +1,25 @@
+{
+  "name": "rework-suit",
+  "description": "CSS preprocessor for SUIT, built on top of Rework",
+  "version": "0.1.0",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "~0.8.20131029",
+    "rework": "~0.18.3",
+    "rework-mixins": "~1.1.1",
+    "rework-vars": "~1.0.1"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha --no-colors --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/rework-suit.git"
+  },
+  "author": "Nicolas Gallagher",
+  "license": "MIT"
+}

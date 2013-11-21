@@ -1,0 +1,30 @@
+/**
+ * Test for variables
+ */
+
+:root {
+    var-border: 5px solid red;
+    var-color: #069;
+}
+
+.TestVariables {
+    border: var(border);
+    color: var(color);
+}
+
+/**
+ * Test for rework mixins
+ */
+
+.TestVendorPrefixes {
+    opacity: 0.5;
+}
+
+/**
+ * Test for vendor prefixes
+ */
+
+.TestVendorPrefixes {
+    background: linear-gradient(to top, #fff, #000);
+    display: flex;
+}
