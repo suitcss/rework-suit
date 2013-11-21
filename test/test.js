@@ -1,7 +1,7 @@
 'use strict';
 
 var expect = require('chai').expect;
-var fs = require('fs');
+var fs = require('fs-extra');
 var suit = require('../index');
 
 describe('suit()', function () {
@@ -25,7 +25,7 @@ describe('suit()', function () {
         });
 
         // for debugging
-        fs.writeFileSync('test/tmp/compiled.css', compiled);
+        fs.createFileSync('test/tmp/compiled.css', compiled);
 
         expect(compiled).to.equal(expected);
 
