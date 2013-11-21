@@ -25,7 +25,7 @@ describe('suit()', function () {
         });
 
         // for debugging
-        fs.createFileSync('test/tmp/compiled.css', compiled);
+        fs.outputFileSync('test/tmp/compiled.css', compiled);
 
         expect(compiled).to.equal(expected);
 
