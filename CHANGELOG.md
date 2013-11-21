@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.1.1 (November 21, 2013)
+
 * Simplify IE 8 opacity declaration.
 * Fix creation of debugging `compiled.css` file.
 
