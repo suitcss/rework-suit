@@ -17,7 +17,47 @@ npm install --save rework-suit
 * [Autoprefixer](https://github.com/ai/autoprefixer)
 * [Variables](https://github.com/visionmedia/rework-vars) based on the draft
   [CSS Variables Spec](http://www.w3.org/TR/css-variables-1/)
-* IE "support" for `opacity`.
+* IE 8 "support" for `opacity`.
+
+Original:
+
+```css
+:root {
+    var-border: 5px solid red;
+    var-color: #069;
+}
+
+.example {
+    background: linear-gradient(to top, #fff, #000);
+    border: var(border);
+    color: var(color);
+    display: flex;
+    opacity: 0.5;
+}
+```
+
+Compiled:
+
+```css
+:root {
+  var-border: 5px solid red;
+  var-color: #069;
+}
+
+.example {
+  background: -webkit-linear-gradient(bottom, #fff, #000);
+  background: linear-gradient(to top, #fff, #000);
+  border: 5px solid red;
+  color: #069;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+}
+```
 
 ## API
 
