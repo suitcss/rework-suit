@@ -100,6 +100,7 @@ As a Rework plugin:
 
 
 ```js
+var fs = require('fs');
 var rework = require('rework');
 // require the module
 var suit = require('rework-suit');
