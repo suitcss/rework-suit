@@ -46,6 +46,7 @@ Compiled:
 }
 
 .example {
+  background: -webkit-gradient(linear, bottom left, top left, from(#fff), to(#000));
   background: -webkit-linear-gradient(bottom, #fff, #000);
   background: linear-gradient(to top, #fff, #000);
   border: 5px solid red;
@@ -62,39 +63,57 @@ Compiled:
 
 ## API
 
-### suit(config)
+### suit([browsers])
 
-Takes an object (configuration) and returns a string of compiled CSS.
+Optionally pass an array of the browsers you want autoprefixer to know about.
+See the [autoprefixer](https://github.com/ai/autoprefixer) documentation for
+more details.
 
-#### `config.browsers`: Array (of String)
+### suit([browsers]).compile(css)
 
-The browsers you want autoprefixer to know about. See the
-[autoprefixer](https://github.com/ai/autoprefixer) documentation for more
-details.
+Process a string of CSS. Returns a string.
 
-#### `config.src`: String
+### suit([browsers]).rework
 
-The path to the source file you want to process.
+Use as a Rework plugin.
 
 ## Use
+
+To process CSS directly:
 
 ```js
 var fs = require('fs');
 // require the module
 var suit = require('rework-suit');
 
-// process some CSS
-var compiled = suit({
-    // the CSS file to process
-    src: 'build/build.css'
-    // the browsers you want autoprefixer to know about
-    browsers: [
-        '> 2%'
-    ]
-});
+// get the CSS
+var css = fs.readFileSync('build/build.css', 'utf8').toString();
+
+// process the CSS
+var compiled = suit(['> 2%']).compile(css)
 
 // write to disk
-fs.writeFile('build/build.css', compiled);
+fs.writeFileSync('build/build.css', compiled);
+```
+
+As a Rework plugin:
+
+
+```js
+var rework = require('rework');
+// require the module
+var suit = require('rework-suit');
+
+// get the CSS
+var css = fs.readFileSync('build/build.css', 'utf8').toString();
+
+// process the CSS with Rework
+var compiled = rework(css)
+  .use(suit(['> 2%']).rework)
+  .toString();
+
+// write to disk
+fs.writeFileSync('build/build.css', compiled);
 ```
 
 ## Testing

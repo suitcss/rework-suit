@@ -7,7 +7,7 @@
 var autoprefixer = require('autoprefixer');
 var fs = require('fs');
 var rework = require('rework');
-var vars = require('rework-vars');
+var vars = require('rework-vars')();
 var opacity = require('./lib/opacity');
 
 /**
@@ -17,31 +17,56 @@ var opacity = require('./lib/opacity');
 module.exports = suit;
 
 /**
- * @param {Object} options the `browsers` and `src` configuration
- * @return {String} the compiled CSS
+ * Specify the browsers that autoprefixer should know about
+ *
+ * @param {Array} browsers browser configuration data for autoprefixer
+ * @return {suit}
  */
 
-function suit(options) {
-    options = options || {};
-    var browsers = options.browsers || [];
-    var src = options.src;
+var browserConfig;
 
-    if (!fs.existsSync(src)) {
-        throw new Error('rework-suit: missing a source file');
+function suit(browsers) {
+    if (browsers && Object.prototype.toString.call(browsers) !== '[object Array]') {
+        throw new Error('rework-suit: `suit(browsers)` If supplied, the argument must be an Array');
     }
 
-    var original = fs.readFileSync(src, 'utf8');
-
-    var compiled = rework(original)
-        // css variables
-        .use(vars())
-        // opacity for IE 8
-        .use(rework.mixin({
-            opacity: opacity
-        }))
-        // vendor prefixes
-        .use(autoprefixer(browsers).rework)
-        .toString();
-
-    return compiled;
+    browserConfig = browsers || autoprefixer['default'];
+    return suit;
 }
+
+/**
+ * Compile CSS using Rework rework plugins to a rework instance; export as a
+ * rework plugin
+ *
+ * @param {String} css the source CSS
+ * @return {String}
+ */
+
+suit.compile = function (css) {
+    if (typeof css !== 'string') {
+        throw new Error('rework-suit: `compile(css)` The argument must be a String');
+    }
+
+    return rework(css)
+      .use(suit(browserConfig).rework)
+      .toString();
+};
+
+/**
+ * Apply rework plugins to a rework instance; export as a rework plugin
+ *
+ * @param {String} css
+ * @param {Object} reworkInstance
+ */
+
+suit.rework = function (css, reworkInstance) {
+    reworkInstance
+    // css variables
+    .use(vars)
+    // opacity for IE 8
+    .use(rework.mixin({
+        opacity: opacity
+    }))
+    // vendor prefixes
+    .use(autoprefixer(browserConfig).rework);
+};

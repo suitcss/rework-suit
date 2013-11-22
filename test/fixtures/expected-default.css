@@ -1,0 +1,37 @@
+/**
+ * Test for variables
+ */
+
+:root {
+  var-border: 5px solid red;
+  var-color: #069;
+}
+
+.TestVariables {
+  border: 5px solid red;
+  color: #069;
+}
+
+/**
+ * Test for rework mixins
+ */
+
+.TestVendorPrefixes {
+  opacity: 0.5;
+  -ms-filter: "alpha(opacity=50)";
+}
+
+/**
+ * Test for vendor prefixes
+ */
+
+.TestVendorPrefixes {
+  background: -webkit-gradient(linear, bottom left, top left, from(#fff), to(#000));
+  background: -webkit-linear-gradient(bottom, #fff, #000);
+  background: linear-gradient(to top, #fff, #000);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
