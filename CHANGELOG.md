@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.2.0 (November 21, 2013)
+
 * Support use as a Rework plugin.
 * Change the input from a file path to a String.
 
