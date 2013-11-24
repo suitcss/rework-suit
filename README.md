@@ -57,7 +57,7 @@ Compiled:
   display: -ms-flexbox;
   display: flex;
   opacity: 0.5;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  -ms-filter: "alpha(opacity=50)";
 }
 ```
 
