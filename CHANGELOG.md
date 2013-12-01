@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.3.0 (December 1, 2013)
+
 * Update 'rework-vars' to 1.1.0.
 
 === 0.2.0 (November 21, 2013)
