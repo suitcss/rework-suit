@@ -9,12 +9,12 @@
     "rework-vars": "~1.1.0"
   },
   "devDependencies": {
-    "chai": "*",
+    "chai": "~1.8.1",
     "fs-extra": "~0.8.1",
-    "mocha": "*"
+    "mocha": "~1.14.0"
   },
   "scripts": {
-    "test": "mocha --no-colors --reporter spec"
+    "test": "./node_modules/.bin/mocha --no-colors"
   },
   "repository": {
     "type": "git",
