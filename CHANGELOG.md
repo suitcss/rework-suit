@@ -1,5 +1,7 @@
 === HEAD
 
+* Update 'rework-vars' to 1.1.0.
+
 === 0.2.0 (November 21, 2013)
 
 * Support use as a Rework plugin.
