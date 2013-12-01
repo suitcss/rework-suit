@@ -10,54 +10,56 @@ CSS preprocessor for [SUIT](https://github.com/suitcss/suit), built on top of
 Install with npm:
 
 ```
-npm install --save rework-suit
+npm install rework-suit
 ```
 
 ## Features
 
 * [Autoprefixer](https://github.com/ai/autoprefixer)
 * [Variables](https://github.com/visionmedia/rework-vars) based on the draft
-  [CSS Variables Spec](http://www.w3.org/TR/css-variables-1/)
+  [W3C-style CSS Variables](http://www.w3.org/TR/css-variables/)
 * IE 8 "support" for `opacity`.
 
 Original:
 
 ```css
 :root {
-    var-border: 5px solid red;
-    var-color: #069;
+    var-color: green;
 }
 
 .example {
+    /* vendor prefixes */
     background: linear-gradient(to top, #fff, #000);
-    border: var(border);
-    color: var(color);
     display: flex;
+    /* IE opacity */
     opacity: 0.5;
+    /* simple variable */
+    color: var(color);
+    /* variable with fallback */
+    outline: var(outline, 1px solid red);
 }
 ```
 
 Compiled:
 
 ```css
-:root {
-  var-border: 5px solid red;
-  var-color: #069;
-}
-
 .example {
+  /* vendor prefixes */
   background: -webkit-gradient(linear, bottom left, top left, from(#fff), to(#000));
   background: -webkit-linear-gradient(bottom, #fff, #000);
   background: linear-gradient(to top, #fff, #000);
-  border: 5px solid red;
-  color: #069;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  /* IE opacity */
   opacity: 0.5;
   -ms-filter: "alpha(opacity=50)";
+  /* simple variable */
+  color: green;
+  /* variable with fallback */
+  outline: 1px solid red;
 }
 ```
 
@@ -119,9 +121,14 @@ fs.writeFileSync('build/build.css', compiled);
 
 ## Testing
 
-From the repo root:
+Install all dependencies and run the tests:
 
 ```
-npm install
-npm test
+make
+```
+
+Run just the tests:
+
+```
+make test
 ```
