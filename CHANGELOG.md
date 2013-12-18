@@ -1,5 +1,9 @@
 === HEAD
 
+=== 0.4.1 (December 18, 2013)
+
+* Update 'autoprefixer' to 0.8.20131213
+
 === 0.4.0 (December 18, 2013)
 
 * Add 'rework-calc'.
