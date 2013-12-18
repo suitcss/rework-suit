@@ -32,12 +32,11 @@
  */
 
 .TestVendorPrefixes {
-  background: -webkit-gradient(linear, bottom left, top left, from(#fff), to(#000));
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#000));
   background: -webkit-linear-gradient(bottom, #fff, #000);
   background: linear-gradient(to top, #fff, #000);
   display: -webkit-box;
   display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
 }

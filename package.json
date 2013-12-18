@@ -4,7 +4,7 @@
   "version": "0.4.0",
   "main": "index.js",
   "dependencies": {
-    "autoprefixer": "~0.8.20131029",
+    "autoprefixer": "0.8.20131213",
     "rework": "~0.18.3",
     "rework-vars": "~2.0.2",
     "rework-calc": "~0.2.1"
