@@ -1,5 +1,8 @@
 === HEAD
 
+* Add 'rework-calc'.
+* Update 'rework-vars' to 2.0.x.
+
 === 0.3.0 (December 1, 2013)
 
 * Update 'rework-vars' to 1.1.0.
