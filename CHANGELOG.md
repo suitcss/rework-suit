@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.4.0 (December 18, 2013)
+
 * Add 'rework-calc'.
 * Update 'rework-vars' to 2.0.x.
 
