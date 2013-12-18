@@ -16,7 +16,7 @@ npm install rework-suit
 ## Features
 
 * [Autoprefixer](https://github.com/ai/autoprefixer)
-  [W3C-style CSS Variables](http://www.w3.org/TR/css-variables/)
+* [W3C-style CSS Variables](http://www.w3.org/TR/css-variables/)
 * IE 8 "support" for basic use of `calc()`. Via [rework-calc](https://github.com/klei-dev/rework-calc).
 * IE 8 "support" for `opacity`.
 
