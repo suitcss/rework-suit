@@ -11,6 +11,14 @@
 }
 
 /**
+ * Test for rework calc
+ */
+
+.TestCalc {
+  width: 200px;
+}
+
+/**
  * Test for rework mixins
  */
 

@@ -16,31 +16,34 @@ npm install rework-suit
 ## Features
 
 * [Autoprefixer](https://github.com/ai/autoprefixer)
-* [Variables](https://github.com/visionmedia/rework-vars) based on the draft
   [W3C-style CSS Variables](http://www.w3.org/TR/css-variables/)
+* IE 8 "support" for basic use of `calc()`. Via [rework-calc](https://github.com/klei-dev/rework-calc).
 * IE 8 "support" for `opacity`.
 
 Original:
 
 ```css
 :root {
-    var-color: green;
+  var-color: green;
+  var-width: 100px;
 }
 
 .example {
-    /* vendor prefixes */
-    background: linear-gradient(to top, #fff, #000);
-    display: flex;
-    /* IE opacity */
-    opacity: 0.5;
-    /* simple variable */
-    color: var(color);
-    /* variable with fallback */
-    outline: var(outline, 1px solid red);
+  /* vendor prefixes */
+  background: linear-gradient(to top, #fff, #000);
+  display: flex;
+  /* IE opacity */
+  opacity: 0.5;
+  /* simple variable */
+  color: var(color);
+  /* variable with fallback */
+  outline: var(outline, 1px solid red);
+  /* calc */
+  width: calc(var(width) * 2);
 }
 ```
 
-Compiled:
+yields:
 
 ```css
 .example {
@@ -60,6 +63,8 @@ Compiled:
   color: green;
   /* variable with fallback */
   outline: 1px solid red;
+  /* calc */
+  width: 200px;
 }
 ```
 

@@ -5,6 +5,7 @@
  */
 
 var autoprefixer = require('autoprefixer');
+var calc = require('rework-calc');
 var fs = require('fs');
 var rework = require('rework');
 var vars = require('rework-vars')();
@@ -63,6 +64,8 @@ suit.rework = function (css, reworkInstance) {
     reworkInstance
     // css variables
     .use(vars)
+    // css calc
+    .use(calc)
     // opacity for IE 8
     .use(rework.mixin({
         opacity: opacity

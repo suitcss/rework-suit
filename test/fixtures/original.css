@@ -3,14 +3,23 @@
  */
 
 :root {
-    var-border: 5px solid red;
-    var-color: #069;
+  var-border: 5px solid red;
+  var-color: #069;
+  var-width: 100px;
 }
 
 .TestVariables {
-    border: var(border, 1px solid rgba(255, 0, 0, 0.5));
-    color: var(color);
-    outline: var(outline, 1px solid rgba(0, 0, 255, 0.5));
+  border: var(border, 1px solid rgba(255, 0, 0, 0.5));
+  color: var(color);
+  outline: var(outline, 1px solid rgba(0, 0, 255, 0.5));
+}
+
+/**
+ * Test for rework calc
+ */
+
+.TestCalc {
+  width: calc(var(width) * 2);
 }
 
 /**
@@ -18,7 +27,7 @@
  */
 
 .TestVendorPrefixes {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 /**
@@ -26,6 +35,6 @@
  */
 
 .TestVendorPrefixes {
-    background: linear-gradient(to top, #fff, #000);
-    display: flex;
+  background: linear-gradient(to top, #fff, #000);
+  display: flex;
 }
