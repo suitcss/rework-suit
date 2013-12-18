@@ -6,7 +6,7 @@
   "dependencies": {
     "autoprefixer": "~0.8.20131029",
     "rework": "~0.18.3",
-    "rework-vars": "~1.1.0"
+    "rework-vars": "~2.0.2"
   },
   "devDependencies": {
     "chai": "~1.8.1",

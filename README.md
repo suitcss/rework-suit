@@ -100,7 +100,6 @@ fs.writeFileSync('build/build.css', compiled);
 
 As a Rework plugin:
 
-
 ```js
 var fs = require('fs');
 var rework = require('rework');
