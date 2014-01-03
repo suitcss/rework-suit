@@ -1,5 +1,8 @@
 === HEAD
 
+* Rename the 'compile' method to 'process'.
+* Use 'rework-mixin-opacity' to transform 'opacity'.
+
 === 0.4.1 (December 18, 2013)
 
 * Update 'autoprefixer' to 0.8.20131213
