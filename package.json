@@ -7,7 +7,8 @@
     "autoprefixer": "0.8.20131213",
     "rework": "~0.18.3",
     "rework-vars": "~2.0.2",
-    "rework-calc": "~0.2.1"
+    "rework-calc": "~0.2.1",
+    "rework-mixin-opacity": "~0.1.0"
   },
   "devDependencies": {
     "chai": "~1.8.1",

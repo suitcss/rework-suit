@@ -8,8 +8,8 @@ var autoprefixer = require('autoprefixer');
 var calc = require('rework-calc');
 var fs = require('fs');
 var rework = require('rework');
+var opacity = require('rework-mixin-opacity');
 var vars = require('rework-vars')();
-var opacity = require('./lib/opacity');
 
 /**
  * Module exports
