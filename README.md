@@ -10,7 +10,7 @@ CSS preprocessor for [SUIT](https://github.com/suitcss/suit), built on top of
 Install with npm:
 
 ```
-npm install rework-suit
+npm install --save-dev rework-suit
 ```
 
 ## Features

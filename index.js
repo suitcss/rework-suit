@@ -27,12 +27,12 @@ module.exports = suit;
 var browserConfig;
 
 function suit(browsers) {
-    if (browsers && Object.prototype.toString.call(browsers) !== '[object Array]') {
-        throw new Error('rework-suit: `suit(browsers)` If supplied, the argument must be an Array');
-    }
+  if (browsers && Object.prototype.toString.call(browsers) !== '[object Array]') {
+    throw new Error('rework-suit: `suit(browsers)` If supplied, the argument must be an Array');
+  }
 
-    browserConfig = browsers || autoprefixer['default'];
-    return suit;
+  browserConfig = browsers || autoprefixer['default'];
+  return suit;
 }
 
 /**
@@ -44,13 +44,13 @@ function suit(browsers) {
  */
 
 suit.compile = function (css) {
-    if (typeof css !== 'string') {
-        throw new Error('rework-suit: `compile(css)` The argument must be a String');
-    }
+  if (typeof css !== 'string') {
+    throw new Error('rework-suit: `compile(css)` The argument must be a String');
+  }
 
-    return rework(css)
-      .use(suit(browserConfig).rework)
-      .toString();
+  return rework(css)
+    .use(suit(browserConfig).rework)
+    .toString();
 };
 
 /**
@@ -61,14 +61,14 @@ suit.compile = function (css) {
  */
 
 suit.rework = function (css, reworkInstance) {
-    reworkInstance
+  reworkInstance
     // css variables
     .use(vars)
     // css calc
     .use(calc)
     // opacity for IE 8
     .use(rework.mixin({
-        opacity: opacity
+      opacity: opacity
     }))
     // vendor prefixes
     .use(autoprefixer(browserConfig).rework);
