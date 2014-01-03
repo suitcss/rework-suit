@@ -36,14 +36,13 @@ function suit(browsers) {
 }
 
 /**
- * Compile CSS using Rework rework plugins to a rework instance; export as a
- * rework plugin
+ * Process CSS using Rework
  *
- * @param {String} css the source CSS
+ * @param {String} css
  * @return {String}
  */
 
-suit.compile = function (css) {
+suit.process = function (css) {
   if (typeof css !== 'string') {
     throw new Error('rework-suit: `compile(css)` The argument must be a String');
   }

@@ -16,54 +16,54 @@ describe('suit()', function () {
     'safari >=6'
   ];
 
-  describe('.compile()', function () {
+  describe('.process()', function () {
     it('throws an error when there is no input String', function () {
-      var compiled = function () {
-        return suit().compile();
+      var processed = function () {
+        return suit().process();
       };
-      expect(compiled).to.throw(Error);
+      expect(processed).to.throw(Error);
     });
 
     it('generates the expected output with default browser config', function () {
-      var compiled = suit().compile(original);
+      var processed = suit().process(original);
 
       // for debugging
-      fs.outputFileSync('test/tmp/compiled-default.css', compiled);
+      fs.outputFileSync('test/tmp/processed-default.css', processed);
 
-      expect(compiled).to.equal(expectedDefault);
+      expect(processed).to.equal(expectedDefault);
     });
 
     it('generates the expected output with custom browser config', function () {
-      var compiled = suit(browsers).compile(original);
+      var processed = suit(browsers).process(original);
 
       // for debugging
-      fs.outputFileSync('test/tmp/compiled-custom.css', compiled);
+      fs.outputFileSync('test/tmp/processed-custom.css', processed);
 
-      expect(compiled).to.equal(expectedCustom);
+      expect(processed).to.equal(expectedCustom);
     });
   });
 
   describe('.rework()', function () {
     it('generates the expected output with default browser config', function () {
-      var compiled = rework(original)
+      var processed = rework(original)
         .use(suit().rework)
         .toString();
 
       // for debugging
-      fs.outputFileSync('test/tmp/compiled-rework-default.css', compiled);
+      fs.outputFileSync('test/tmp/processed-rework-default.css', processed);
 
-      expect(compiled).to.equal(expectedDefault);
+      expect(processed).to.equal(expectedDefault);
     });
 
     it('generates the expected output with custom browser config', function () {
-      var compiled = rework(original)
+      var processed = rework(original)
         .use(suit(browsers).rework)
         .toString();
 
       // for debugging
-      fs.outputFileSync('test/tmp/compiled-rework-custom.css', compiled);
+      fs.outputFileSync('test/tmp/processed-rework-custom.css', processed);
 
-      expect(compiled).to.equal(expectedCustom);
+      expect(processed).to.equal(expectedCustom);
     });
   });
 

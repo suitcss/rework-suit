@@ -76,7 +76,7 @@ Optionally pass an array of the browsers you want autoprefixer to know about.
 See the [autoprefixer](https://github.com/ai/autoprefixer) documentation for
 more details.
 
-### suit([browsers]).compile(css)
+### suit([browsers]).process(css)
 
 Process a string of CSS. Returns a string.
 
@@ -97,10 +97,10 @@ var suit = require('rework-suit');
 var css = fs.readFileSync('build/build.css', 'utf8').toString();
 
 // process the CSS
-var compiled = suit(['> 2%']).compile(css)
+var processed = suit(['> 2%']).process(css)
 
 // write to disk
-fs.writeFileSync('build/build.css', compiled);
+fs.writeFileSync('build/build.css', processed);
 ```
 
 As a Rework plugin:
@@ -115,12 +115,12 @@ var suit = require('rework-suit');
 var css = fs.readFileSync('build/build.css', 'utf8').toString();
 
 // process the CSS with Rework
-var compiled = rework(css)
+var processed = rework(css)
   .use(suit(['> 2%']).rework)
   .toString();
 
 // write to disk
-fs.writeFileSync('build/build.css', compiled);
+fs.writeFileSync('build/build.css', processed);
 ```
 
 ## Testing
