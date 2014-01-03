@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.5.0 (January 3, 2014)
+
 * Rename the 'compile' method to 'process'.
 * Use 'rework-mixin-opacity' to transform 'opacity'.
 
