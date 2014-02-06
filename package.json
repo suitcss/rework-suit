@@ -16,7 +16,8 @@
     "mocha": "~1.14.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --no-colors"
+    "test": "mocha --no-colors",
+    "watch": "mocha --watch --reporter spec"
   },
   "repository": {
     "type": "git",
