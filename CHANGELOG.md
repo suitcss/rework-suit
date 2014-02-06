@@ -1,5 +1,8 @@
 === HEAD
 
+* Focus the module on being an optionated bundle of Rework plugins.
+* Remove 'autoprefixer' as it's no longer available as a Rework plugin.
+
 === 0.5.0 (January 3, 2014)
 
 * Rename the 'compile' method to 'process'.
