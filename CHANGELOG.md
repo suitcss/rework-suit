@@ -1,5 +1,7 @@
 === HEAD
 
+=== 1.0.0 (February 6, 2014)
+
 * Focus the module on being an optionated bundle of Rework plugins.
 * Remove 'autoprefixer' as it's no longer available as a Rework plugin.
 
