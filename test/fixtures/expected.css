@@ -1,0 +1,28 @@
+/**
+ * Test for variables
+ */
+
+
+
+.TestVariables {
+  border: 5px solid red;
+  color: #069;
+  outline: 1px solid rgba(0, 0, 255, 0.5);
+}
+
+/**
+ * Test for calc
+ */
+
+.TestCalc {
+  width: 200px;
+}
+
+/**
+ * Test for opacity mixin
+ */
+
+.TestOpacityMixin {
+  opacity: 0.5;
+  -ms-filter: "alpha(opacity=50)";
+}

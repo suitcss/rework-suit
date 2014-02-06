@@ -15,7 +15,7 @@
 }
 
 /**
- * Test for rework calc
+ * Test for calc
  */
 
 .TestCalc {
@@ -23,18 +23,9 @@
 }
 
 /**
- * Test for rework mixins
+ * Test for opacity mixin
  */
 
-.TestVendorPrefixes {
+.TestOpacityMixin {
   opacity: 0.5;
-}
-
-/**
- * Test for vendor prefixes
- */
-
-.TestVendorPrefixes {
-  background: linear-gradient(to top, #fff, #000);
-  display: flex;
 }
