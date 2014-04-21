@@ -23,19 +23,19 @@ Original:
 
 ```css
 :root {
-  var-color: green;
-  var-width: 100px;
+  --color: green;
+  --width: 100px;
 }
 
 .example {
   /* IE opacity */
   opacity: 0.5;
   /* simple variable */
-  color: var(color);
+  color: var(--color);
   /* variable with fallback */
-  outline: var(outline, 1px solid red);
+  outline: var(--outline, 1px solid red);
   /* calc */
-  width: calc(var(width) * 2);
+  width: calc(var(--width) * 2);
 }
 ```
 

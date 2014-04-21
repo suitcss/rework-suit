@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "rework": "~0.20.2",
-    "rework-vars": "~2.0.2",
+    "rework-vars": "~3.0.0",
     "rework-calc": "~0.2.1",
     "rework-mixin-opacity": "~0.1.0"
   },

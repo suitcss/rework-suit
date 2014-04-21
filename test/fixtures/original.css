@@ -3,15 +3,15 @@
  */
 
 :root {
-  var-border: 5px solid red;
-  var-color: #069;
-  var-width: 100px;
+  --border: 5px solid red;
+  --color: #069;
+  --width: 100px;
 }
 
 .TestVariables {
-  border: var(border, 1px solid rgba(255, 0, 0, 0.5));
-  color: var(color);
-  outline: var(outline, 1px solid rgba(0, 0, 255, 0.5));
+  border: var(--border, 1px solid rgba(255, 0, 0, 0.5));
+  color: var(--color);
+  outline: var(--outline, 1px solid rgba(0, 0, 255, 0.5));
 }
 
 /**
@@ -19,7 +19,7 @@
  */
 
 .TestCalc {
-  width: calc(var(width) * 2);
+  width: calc(var(--width) * 2);
 }
 
 /**
