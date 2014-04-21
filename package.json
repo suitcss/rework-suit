@@ -1,7 +1,7 @@
 {
   "name": "rework-suit",
   "description": "Rework plugin for SUITCSS",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "dependencies": {
     "rework": "~0.20.2",
