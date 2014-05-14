@@ -2,7 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/suitcss/rework-suit.png?branch=master)](http://travis-ci.org/suitcss/rework-suit)
 
-A [Rework](https://github.com/visionmedia/rework) plugin for use with
+A [Rework](https://github.com/reworkcss/rework) plugin for use with
 [SUITCSS](https://github.com/suitcss/suit).
 
 ## Installation
@@ -15,7 +15,7 @@ npm install --save-dev rework-suit
 
 ## Features
 
-* [W3C-style CSS Variables](http://www.w3.org/TR/css-variables/). Via [rework-](https://github.com/reworkcss/rework-vars).
+* [W3C-style CSS Variables](http://www.w3.org/TR/css-variables/). Via [rework-vars](https://github.com/reworkcss/rework-vars).
 * IE 8 "support" for basic use of `calc()`. Via [rework-calc](https://github.com/reworkcss/rework-calc).
 * IE 8 "support" for `opacity`. Via [rework-mixin-opacity](https://github.com/reworkcss/rework-mixin-opacity).
 
