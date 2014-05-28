@@ -5,6 +5,8 @@
  */
 
 var calc = require('rework-calc');
+var conformance = require('rework-suit-conformance');
+var inliner = require('rework-npm');
 var rework = require('rework');
 var opacity = require('rework-mixin-opacity');
 var vars = require('rework-vars')();
@@ -24,6 +26,10 @@ module.exports = suit;
 
 function suit(ast, reworkInstance) {
   reworkInstance
+    // inline imports and require npm modules
+    .use(inliner({
+      prefilter: function (css) { return rework(css).use(conformance).toString(); }
+    }))
     // css variables
     .use(vars)
     // css calc

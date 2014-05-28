@@ -1,4 +1,11 @@
 /**
+ * Test for import
+ */
+
+@import "./test/fixtures/import";
+@import "suitcss-utils-align";
+
+/**
  * Test for variables
  */
 
