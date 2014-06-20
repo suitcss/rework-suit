@@ -6,6 +6,7 @@
 
 var calc = require('rework-calc');
 var customMedia = require('rework-custom-media');
+var inliner = require('rework-npm');
 var rework = require('rework');
 var vars = require('rework-vars')();
 
@@ -25,6 +26,8 @@ module.exports = suit;
 function suit(options) {
   return function (ast, reworkObj) {
     reworkObj
+      // inline imports
+      .use(inliner())
       // custom media queries
       .use(customMedia)
       // variables
