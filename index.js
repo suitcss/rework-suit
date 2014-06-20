@@ -6,8 +6,6 @@
 
 var calc = require('rework-calc');
 var customMedia = require('rework-custom-media');
-var mixin = require('rework-plugin-mixin');
-var opacity = require('rework-mixin-opacity');
 var rework = require('rework');
 var vars = require('rework-vars')();
 
@@ -32,10 +30,6 @@ function suit(options) {
       // variables
       .use(vars)
       // calc
-      .use(calc)
-      // opacity for IE 8
-      .use(mixin({
-        opacity: opacity
-      }));
+      .use(calc);
   };
 }

@@ -10,8 +10,6 @@
     "rework": "^1.0.0",
     "rework-calc": "~0.2.1",
     "rework-custom-media": "^0.1.0",
-    "rework-mixin-opacity": "~0.2.0",
-    "rework-plugin-mixin": "~0.1.0",
     "rework-vars": "^3.1.1"
   },
   "devDependencies": {
