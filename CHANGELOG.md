@@ -1,5 +1,7 @@
 === HEAD
 
+=== 3.0.0 (June 20, 2014)
+
 * Add 'rework-ie-limits'.
 * Add 'rework-suit-conformance'.
 * Support passing of `options`.

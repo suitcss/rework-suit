@@ -1,7 +1,7 @@
 {
   "name": "rework-suit",
   "description": "Rework plugin for SUIT CSS",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "main": "index.js",
   "files": [
     "index.js"
