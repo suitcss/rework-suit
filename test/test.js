@@ -10,7 +10,7 @@ describe('suit()', function () {
   var original = fs.readFileSync('test/fixtures/original.css', 'utf-8').toString().trim();
 
   it('generates the expected output', function () {
-    var actual = rework(original).use(suit).toString().trim();
+    var actual = rework(original).use(suit()).toString().trim();
     assert.equal(actual, expected);
   });
 });
