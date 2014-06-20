@@ -5,6 +5,7 @@
  */
 
 var calc = require('rework-calc');
+var customMedia = require('rework-custom-media');
 var mixin = require('rework-plugin-mixin');
 var rework = require('rework');
 var opacity = require('rework-mixin-opacity');
@@ -25,6 +26,8 @@ module.exports = suit;
 
 function suit(ast, reworkInstance) {
   reworkInstance
+    // css custom media queries
+    .use(customMedia)
     // css variables
     .use(vars)
     // css calc

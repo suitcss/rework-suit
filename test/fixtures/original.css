@@ -1,3 +1,6 @@
+@custom-media --small-viewport (min-width:400px);
+@custom-media --large-viewport screen and (min-width:800px);
+
 /**
  * Test for variables
  */
@@ -28,4 +31,16 @@
 
 .TestOpacityMixin {
   opacity: 0.5;
+}
+
+@media (--small-viewport) {
+  .TestMedia {
+    color: red;
+  }
+}
+
+@media (--large-viewport) {
+  .TestMedia {
+    color: green;
+  }
 }
