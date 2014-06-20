@@ -10,7 +10,7 @@ var customMedia = require('rework-custom-media');
 var inliner = require('rework-npm');
 var limits = require('rework-ie-limits');
 var rework = require('rework');
-var vars = require('rework-vars')();
+var vars = require('rework-vars');
 
 /**
  * Module exports
@@ -26,21 +26,26 @@ module.exports = suit;
  */
 
 function suit(options) {
+  options = options || {};
+
   return function (ast, reworkObj) {
     reworkObj
       // inline imports
       .use(inliner({
+        alias: options.alias,
+        dir: options.dir,
         prefilter: function (css) {
           // per-file conformance checks
           return rework(css).use(conformance).toString();
-        }
+        },
+        shim: options.shim,
       }))
       // check if the number of selectors exceeds the IE limit
       .use(limits)
       // custom media queries
       .use(customMedia)
       // variables
-      .use(vars)
+      .use(vars())
       // calc
       .use(calc);
   };

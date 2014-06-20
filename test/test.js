@@ -8,9 +8,16 @@ var suit = require('../index');
 describe('suit()', function () {
   var expected = fs.readFileSync('test/fixtures/expected.css', 'utf-8').toString().trim();
   var original = fs.readFileSync('test/fixtures/original.css', 'utf-8').toString().trim();
+  var options = {
+    dir: "test/fixtures"
+  };
 
   it('generates the expected output', function () {
-    var actual = rework(original).use(suit()).toString().trim();
+    var actual = rework(original)
+      .use(suit(options))
+      .toString()
+      .trim();
+
     assert.equal(actual, expected);
   });
 });

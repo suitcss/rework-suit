@@ -2,7 +2,7 @@
  * Test for import
  */
 
-@import "./test/fixtures/import";
+@import "./import";
 @import "suitcss-utils-align";
 
 /**
