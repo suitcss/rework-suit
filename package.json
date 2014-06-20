@@ -11,6 +11,7 @@
     "rework-calc": "~0.2.1",
     "rework-custom-media": "^0.1.0",
     "rework-npm": "git://github.com/necolas/rework-npm.git#34f11273030bdf2b8790205ccb0cb53243898130",
+    "rework-suit-conformance": "~0.3.0",
     "rework-vars": "^3.1.1"
   },
   "devDependencies": {

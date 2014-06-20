@@ -1,5 +1,6 @@
 === HEAD
 
+* Add 'rework-suit-conformance'.
 * Support passing of `options`.
 * Add 'rework-custom-media' to support custom media queries.
 * Update 'rework-opacity' to 0.2.x.
