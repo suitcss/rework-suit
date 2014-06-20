@@ -1,4 +1,49 @@
 /**
+ * Test for import
+ */
+
+.imported {
+  padding: 0;
+}
+
+/**
+ * Vertical alignment utilities
+ * Depends on an appropriate `display` value.
+ */
+
+.u-alignBaseline {
+  vertical-align: baseline !important;
+}
+
+.u-alignBottom {
+  vertical-align: bottom !important;
+}
+
+.u-alignMiddle {
+  vertical-align: middle !important;
+}
+
+.u-alignTop {
+  vertical-align: top !important;
+}
+
+/**
+ * Test for custom-media
+ */
+
+@media (min-width:400px) {
+  .TestMedia {
+    color: red;
+  }
+}
+
+@media screen and (min-width:800px) {
+  .TestMedia {
+    color: green;
+  }
+}
+
+/**
  * Test for variables
  */
 
@@ -16,25 +61,4 @@
 
 .TestCalc {
   width: 200px;
-}
-
-/**
- * Test for opacity mixin
- */
-
-.TestOpacityMixin {
-  opacity: 0.5;
-  -ms-filter: "alpha(opacity=50)";
-}
-
-@media (min-width:400px) {
-  .TestMedia {
-    color: red;
-  }
-}
-
-@media screen and (min-width:800px) {
-  .TestMedia {
-    color: green;
-  }
 }

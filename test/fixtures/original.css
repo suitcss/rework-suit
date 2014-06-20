@@ -1,5 +1,28 @@
+/**
+ * Test for import
+ */
+
+@import "./test/fixtures/import";
+@import "suitcss-utils-align";
+
+/**
+ * Test for custom-media
+ */
+
 @custom-media --small-viewport (min-width:400px);
 @custom-media --large-viewport screen and (min-width:800px);
+
+@media (--small-viewport) {
+  .TestMedia {
+    color: red;
+  }
+}
+
+@media (--large-viewport) {
+  .TestMedia {
+    color: green;
+  }
+}
 
 /**
  * Test for variables
@@ -23,24 +46,4 @@
 
 .TestCalc {
   width: calc(var(--width) * 2);
-}
-
-/**
- * Test for opacity mixin
- */
-
-.TestOpacityMixin {
-  opacity: 0.5;
-}
-
-@media (--small-viewport) {
-  .TestMedia {
-    color: red;
-  }
-}
-
-@media (--large-viewport) {
-  .TestMedia {
-    color: green;
-  }
 }
