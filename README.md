@@ -3,7 +3,7 @@
 [![Build Status](https://secure.travis-ci.org/suitcss/rework-suit.png?branch=master)](http://travis-ci.org/suitcss/rework-suit)
 
 A [Rework](https://github.com/reworkcss/rework) plugin for use with
-[SUITCSS](https://github.com/suitcss/suit).
+[SUIT CSS](https://github.com/suitcss/suit).
 
 ## Installation
 
@@ -12,6 +12,21 @@ Install with npm:
 ```
 npm install --save-dev rework-suit
 ```
+
+## Use
+
+As a Rework plugin:
+
+```js
+var css = fs.readFileSync('build/build.css', 'utf8').toString();
+
+var processed = rework(css)
+  .use(suit(options))
+  .toString();
+```
+
+Where `options` has properties `alias`, `dir`, and `shim` corresponding to the
+options available in [rework-npm](https://github.com/conradz/rework-npm).
 
 ## Features
 
@@ -60,18 +75,6 @@ yields:
     width: 200px;
   }
 }
-```
-
-## Use
-
-As a Rework plugin:
-
-```js
-var css = fs.readFileSync('build/build.css', 'utf8').toString();
-
-var processed = rework(css)
-  .use(suit())
-  .toString();
 ```
 
 ## Testing
