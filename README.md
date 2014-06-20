@@ -16,42 +16,49 @@ npm install --save-dev rework-suit
 ## Features
 
 * [W3C-style CSS Variables](http://www.w3.org/TR/css-variables/). Via [rework-vars](https://github.com/reworkcss/rework-vars).
-* IE 8 "support" for basic use of `calc()`. Via [rework-calc](https://github.com/reworkcss/rework-calc).
-* IE 8 "support" for `opacity`. Via [rework-mixin-opacity](https://github.com/reworkcss/rework-mixin-opacity).
+* [W3C-style CSS Custom Media Queries](http://dev.w3.org/csswg/mediaqueries/#custom-mq). Via [rework-custom-media](https://github.com/reworkcss/rework-custom-media).
+* `@import` inliner. Via [rework-npm](https://github.com/conradz/rework-npm).
+* Resolve basic `calc()` expressions. Via [rework-calc](https://github.com/reworkcss/rework-calc).
+* Check for IE selector limit. Via [rework-ie-limits](https://github.com/reworkcss/rework-ie-limits).
 
 Original:
 
 ```css
+@import "normalize.css";
+
+@custom-media --narrow-viewport all and (min-width:300px);
+
 :root {
   --color: green;
   --width: 100px;
 }
 
-.example {
-  /* IE opacity */
-  opacity: 0.5;
-  /* simple variable */
-  color: var(--color);
-  /* variable with fallback */
-  outline: var(--outline, 1px solid red);
-  /* calc */
-  width: calc(var(--width) * 2);
+@media (--narrow-viewport) {
+  .example {
+    /* simple variable */
+    color: var(--color);
+    /* variable with fallback */
+    outline: var(--outline, 1px solid red);
+    /* calc */
+    width: calc(var(--width) * 2);
+  }
 }
 ```
 
 yields:
 
 ```css
-.example {
-  /* IE opacity */
-  opacity: 0.5;
-  -ms-filter: "alpha(opacity=50)";
-  /* simple variable */
-  color: green;
-  /* variable with fallback */
-  outline: 1px solid red;
-  /* calc */
-  width: 200px;
+/* …inlined normalize.css source code… */
+
+@media all and (min-width:300px) {
+  .example {
+    /* simple variable */
+    color: green;
+    /* variable with fallback */
+    outline: 1px solid red;
+    /* calc */
+    width: 200px;
+  }
 }
 ```
 
@@ -63,7 +70,7 @@ As a Rework plugin:
 var css = fs.readFileSync('build/build.css', 'utf8').toString();
 
 var processed = rework(css)
-  .use(suit)
+  .use(suit())
   .toString();
 ```
 
