@@ -1,5 +1,6 @@
 === HEAD
 
+* Add 'rework-ie-limits'.
 * Add 'rework-suit-conformance'.
 * Support passing of `options`.
 * Add 'rework-custom-media' to support custom media queries.
