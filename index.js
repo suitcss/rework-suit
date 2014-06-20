@@ -5,6 +5,7 @@
  */
 
 var calc = require('rework-calc');
+var conformance = require('rework-suit-conformance');
 var customMedia = require('rework-custom-media');
 var inliner = require('rework-npm');
 var rework = require('rework');
@@ -27,7 +28,12 @@ function suit(options) {
   return function (ast, reworkObj) {
     reworkObj
       // inline imports
-      .use(inliner())
+      .use(inliner({
+        prefilter: function (css) {
+          // per-file conformance checks
+          return rework(css).use(conformance).toString();
+        }
+      }))
       // custom media queries
       .use(customMedia)
       // variables
