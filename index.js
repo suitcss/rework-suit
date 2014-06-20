@@ -5,6 +5,7 @@
  */
 
 var calc = require('rework-calc');
+var mixin = require('rework-plugin-mixin');
 var rework = require('rework');
 var opacity = require('rework-mixin-opacity');
 var vars = require('rework-vars')();
@@ -29,7 +30,7 @@ function suit(ast, reworkInstance) {
     // css calc
     .use(calc)
     // opacity for IE 8
-    .use(rework.mixin({
+    .use(mixin({
       opacity: opacity
     }));
 }
