@@ -6,7 +6,7 @@
 * Add 'rework-custom-media' to support custom media queries.
 * Update 'rework-opacity' to 0.2.x.
 * Update 'rework-vars' to 3.x.x.
-* Update 'rework-vars' to 1.x.x.
+* Update 'rework' to 1.x.x.
 
 === 2.0.0 (April 21, 2014)
 

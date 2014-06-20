@@ -30,11 +30,12 @@ options available in [rework-npm](https://github.com/conradz/rework-npm).
 
 ## Features
 
-* [W3C-style CSS Variables](http://www.w3.org/TR/css-variables/). Via [rework-vars](https://github.com/reworkcss/rework-vars).
-* [W3C-style CSS Custom Media Queries](http://dev.w3.org/csswg/mediaqueries/#custom-mq). Via [rework-custom-media](https://github.com/reworkcss/rework-custom-media).
-* `@import` inliner. Via [rework-npm](https://github.com/conradz/rework-npm).
-* Resolve basic `calc()` expressions. Via [rework-calc](https://github.com/reworkcss/rework-calc).
-* Check for IE selector limit. Via [rework-ie-limits](https://github.com/reworkcss/rework-ie-limits).
+* [rework-vars](https://github.com/reworkcss/rework-vars): use [W3C-style CSS Variables](http://www.w3.org/TR/css-variables/).
+* [rework-custom-media](https://github.com/reworkcss/rework-custom-media): use [W3C-style CSS Custom Media Queries](http://dev.w3.org/csswg/mediaqueries/#custom-mq).
+* [rework-npm](https://github.com/conradz/rework-npm): an `@import` inliner.
+* [rework-calc](https://github.com/reworkcss/rework-calc): resolve basic `calc()` expressions.
+* [rework-suit-conformance](https://github.com/reworkcss/rework-suit-conformance): SUIT CSS conformance checks on imported files.
+* [rework-ie-limits](https://github.com/reworkcss/rework-ie-limits): IE selector limit check.
 
 Original:
 
