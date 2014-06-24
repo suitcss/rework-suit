@@ -1,5 +1,7 @@
 === HEAD
 
+=== 3.1.0 (June 24, 2014)
+
 * Update 'rework-npm' to 1.x.x.
 
 === 3.0.0 (June 20, 2014)
