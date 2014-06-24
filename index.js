@@ -27,17 +27,19 @@ module.exports = suit;
 
 function suit(options) {
   options = options || {};
+  // for backwards compatibility with rework-npm < 1.0.0
+  options.root = options.root || options.dir;
 
   return function (ast, reworkObj) {
     reworkObj
       // inline imports
       .use(inliner({
         alias: options.alias,
-        dir: options.dir,
         prefilter: function (css) {
           // per-file conformance checks
           return rework(css).use(conformance).toString();
         },
+        root: options.root,
         shim: options.shim,
       }))
       // check if the number of selectors exceeds the IE limit

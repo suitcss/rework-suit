@@ -1,10 +1,13 @@
 === HEAD
 
+* Update 'rework-npm' to 1.x.x.
+
 === 3.0.0 (June 20, 2014)
 
-* Add 'rework-ie-limits'.
-* Add 'rework-suit-conformance'.
 * Support passing of `options`.
+* Add 'rework-ie-limits'.
+* Add 'rework-npm'.
+* Add 'rework-suit-conformance'.
 * Add 'rework-custom-media' to support custom media queries.
 * Update 'rework-opacity' to 0.2.x.
 * Update 'rework-vars' to 3.x.x.
