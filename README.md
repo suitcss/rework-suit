@@ -34,7 +34,7 @@ options available in [rework-npm](https://github.com/reworkcss/rework-npm).
 * [rework-custom-media](https://github.com/reworkcss/rework-custom-media): use [W3C-style CSS Custom Media Queries](http://dev.w3.org/csswg/mediaqueries/#custom-mq).
 * [rework-npm](https://github.com/reworkcss/rework-npm): an `@import` inliner.
 * [rework-calc](https://github.com/reworkcss/rework-calc): resolve basic `calc()` expressions.
-* [rework-suit-conformance](https://github.com/reworkcss/rework-suit-conformance): SUIT CSS conformance checks on imported files.
+* [rework-suit-conformance](https://github.com/suitcss/rework-suit-conformance): SUIT CSS conformance checks on imported files.
 * [rework-ie-limits](https://github.com/reworkcss/rework-ie-limits): IE selector limit check.
 
 Original:
