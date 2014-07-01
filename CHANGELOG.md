@@ -1,5 +1,7 @@
 === HEAD
 
+=== 4.0.0 (July 1, 2014)
+
 * Update 'rework-calc' to 1.x.x.
 * Update 'rework-suit-conformance' to 0.4.x.
 
