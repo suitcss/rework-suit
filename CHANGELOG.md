@@ -1,5 +1,7 @@
 === HEAD
 
+* Update 'rework-suit-conformance' to 0.4.x.
+
 === 3.1.0 (June 24, 2014)
 
 * Update 'rework-npm' to 1.x.x.
