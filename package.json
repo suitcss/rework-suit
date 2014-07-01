@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "rework": "^1.0.0",
-    "rework-calc": "~0.2.1",
+    "rework-calc": "^1.0.0",
     "rework-custom-media": "~0.1.0",
     "rework-ie-limits": "~0.1.1",
     "rework-npm": "^1.0.0",
