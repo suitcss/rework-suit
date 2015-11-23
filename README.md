@@ -1,4 +1,6 @@
-# rework-suit
+# rework-suit (DEPRECATED)
+
+**Use the [suitcss-preprocessor](https://github.com/suitcss/preprocessor) which now makes use of [postcss](https://github.com/postcss/postcss) directly.**
 
 [![Build Status](https://secure.travis-ci.org/suitcss/rework-suit.png?branch=master)](http://travis-ci.org/suitcss/rework-suit)
 
